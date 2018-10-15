@@ -31,7 +31,7 @@
     e.nome = self.nomeField.text;
     e.quantidadeFuncionarios = [self.quantidadeField.text intValue];
     
-    NSLog(@"Empresa criada. Nome=%@, funcionários=%d", e.nome, e.quantidadeFuncionarios);
+    NSLog(@"Empresa criada. Nome=%@, funcionários=%d .", e.nome, e.quantidadeFuncionarios);
     
     [e release];
 }
