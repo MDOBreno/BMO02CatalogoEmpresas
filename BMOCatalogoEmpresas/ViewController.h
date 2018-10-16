@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController { // Abre chave aqui
+    NSMutableArray *catalogo;
+} // Fecha chave aqui
 
+// Este codigo abaixo já havia sido feito anteriormente
 @property (weak, nonatomic) IBOutlet UITextField *nomeField;
 @property (weak, nonatomic) IBOutlet UITextField *quantidadeField;
+@property (weak, nonatomic) IBOutlet UILabel *avisoSucessoLabel;
 - (IBAction)incrementadorAlterado:(id)sender;
 - (IBAction)salvar:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *avisoSucessoLabel;
 
 @end
 
