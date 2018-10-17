@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.avisoSucessoLabel.hidden = YES;
 }
 
 // BMOLabs - Clone de Empresa
@@ -52,6 +53,9 @@
 }
 
 - (IBAction)salvar:(id)sender {
+    // Libera teclado - "Abster de responder pelos eventos por enquanto”
+    [self.nomeField resignFirstResponder];
+    
     Empresa *e = [[Empresa alloc] init];
     e.nome = self.nomeField.text;
     e.quantidadeFuncionarios = [self.quantidadeField.text intValue];
@@ -68,5 +72,21 @@
     [self mostraCatalogo];
     
     [e release];
+    
+    
+    self.avisoSucessoLabel.alpha = 0;
+    [UIView animateWithDuration:1 animations:^{
+        self.avisoSucessoLabel.hidden = NO;
+        self.avisoSucessoLabel.alpha = 1;
+    } completion:^(BOOL finalizado) {
+        [UIView animateWithDuration:1 delay:2 options:0 animations:^{
+            self.avisoSucessoLabel.alpha = 0;
+        } completion:^(BOOL finalizado) {
+            self.avisoSucessoLabel.hidden = YES;
+        }];
+    }];
+    
+    
+
 }
 @end
