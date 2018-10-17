@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
     int quantidadeFuncionarios;
 }
 
+-(instancetype) initWithNome:(NSString *) nome
+    eQuantidadeFuncionarios:(int) quantidade;
+
 @property (nonatomic, retain) NSString *nome;
 @property (nonatomic, assign) int quantidadeFuncionarios;
 
