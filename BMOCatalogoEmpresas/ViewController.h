@@ -19,5 +19,7 @@
 - (IBAction)incrementadorAlterado:(id)sender;
 - (IBAction)salvar:(id)sender;
 
+- (IBAction)showCatalogo:(id)sender;
+
 @end
 

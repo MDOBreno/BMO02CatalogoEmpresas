@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Empresa.h"
+#import "Catalogo.h"
 
 @interface ViewController ()
 
@@ -89,4 +90,14 @@
     
 
 }
+
+- (IBAction)showCatalogo:(id)sender {
+    Catalogo *c = [[Catalogo alloc] initWithEmpresas:catalogo];
+    
+    c.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    
+    [self presentModalViewController:c animated:YES];
+    // [c release];
+}
+
 @end
