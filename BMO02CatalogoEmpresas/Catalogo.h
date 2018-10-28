@@ -1,6 +1,6 @@
 //
 //  Catalogo.h
-//  BMOCatalogoEmpresas
+//  BMO02CatalogoEmpresas
 //
 //  Created by Breno Medeiros on 27/10/18.
 //  Copyright © 2018 Breno Medeiros de Oliveira. All rights reserved.

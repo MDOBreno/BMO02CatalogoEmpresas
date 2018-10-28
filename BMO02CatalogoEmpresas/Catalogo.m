@@ -1,6 +1,6 @@
 //
 //  Catalogo.m
-//  BMOCatalogoEmpresas
+//  BMO02CatalogoEmpresas
 //
 //  Created by Breno Medeiros on 27/10/18.
 //  Copyright © 2018 Breno Medeiros de Oliveira. All rights reserved.
@@ -28,15 +28,9 @@
 
 -(instancetype) initWithEmpresas:(NSMutableArray *)cEmpresas {
     
-    if ((self = [super init])) {empresas =[[NSMutableArray alloc] init];
-        for (Empresa *empresa in cEmpresas) {
-//            NSString *nome = empresa.nome;
-//            long *quantidadeFuncionarios = empresa.quantidadeFuncionarios;
-//
-//            Empresa *e = [[Empresa alloc] initWithNome:nome eQuantidadeFuncionarios:quantidadeFuncionarios];
-            [empresas addObject:empresa];
-            // [c release];
-        }
+    if ((self = [super init])) {
+        empresas =[[NSMutableArray alloc] init];
+        empresas = cEmpresas;
     }
     
     return self;
