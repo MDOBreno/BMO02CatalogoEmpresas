@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  BMOCatalogoEmpresas
+//  BMO02CatalogoEmpresas
 //
 //  Created by Breno Medeiros de Oliveira on 09/10/2018.
 //  Copyright © 2018 Breno Medeiros de Oliveira. All rights reserved.
@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Empresa.h"
+#import "Catalogo.h"
 
 @interface ViewController ()
 
@@ -89,4 +90,14 @@
     
 
 }
+
+- (IBAction)showCatalogo:(id)sender {
+    Catalogo *c = [[Catalogo alloc] initWithEmpresas:catalogo];
+    
+    c.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    [self presentModalViewController:c animated:YES];
+    // [c release];
+}
+
 @end
